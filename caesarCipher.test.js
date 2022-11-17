@@ -16,8 +16,8 @@ test('AbCdE => BcDeF', () => {
   expect(caesarCipher('AbCdE')).toBe('BcDeF');
 });
 
-test('hello! => immp!', () => {
-  expect(caesarCipher('hello!')).toBe('immp!');
+test('hello! => ifmmp!', () => {
+  expect(caesarCipher('hello!')).toBe('ifmmp!');
 });
 
 test('abc123 => bcd123', () => {
