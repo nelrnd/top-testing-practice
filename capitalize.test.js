@@ -1,15 +1,25 @@
 const capitalize = require('./capitalize');
 
-test('Capitalize first character of a string', () => {
-  expect(capitalize('hello world')).toBe('Hello world');
+test('Capitalizes first letter of a string', () => {
   expect(capitalize('abc')).toBe('Abc');
-  expect(capitalize('BANG')).toBe('BANG');
 });
 
-test('Return empty string if given empty string', () => {
-  expect(capitalize('')).toBe('');
+test('Capitalizes first letter of a string', () => {
+  expect(capitalize('123 abc')).toBe('123 Abc');
 });
 
-test('Return undefined if given nothing', () => {
+test('If first letter already capitalized, changes nothing', () => {
+  expect(capitalize('Abc')).toBe('Abc');
+});
+
+test('If string all upper case, changes nothing', () => {
+  expect(capitalize('ABC')).toBe('ABC');
+});
+
+test('Returns undefined if given nothing', () => {
   expect(capitalize()).toBeUndefined();
+});
+
+test('Returns empty string if given empty string', () => {
+  expect(capitalize('')).toBe('');
 });
