@@ -2,9 +2,6 @@ const capitalize = require('./capitalize');
 
 test('Capitalizes first letter of a string', () => {
   expect(capitalize('abc')).toBe('Abc');
-});
-
-test('Capitalizes first letter of a string', () => {
   expect(capitalize('123 abc')).toBe('123 Abc');
 });
 
@@ -22,4 +19,11 @@ test('Returns undefined if given nothing', () => {
 
 test('Returns empty string if given empty string', () => {
   expect(capitalize('')).toBe('');
+});
+
+test('Throw error if given argument is not a string', () => {
+  expect(() => capitalize(123)).toThrow('Argument must be a string');
+  expect(() => capitalize(['a', 'b', 'c'])).toThrow(
+    'Argument must be a string'
+  );
 });
