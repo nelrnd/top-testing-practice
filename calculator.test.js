@@ -31,7 +31,7 @@ test('substract 5 and 3 to be 2', () => {
 });
 
 test('substract 10 and 5 to be 5', () => {
-  expect(calculator.subtract(10, 5)).toBe(5);
+  expect(calculator.substract(10, 5)).toBe(5);
 });
 
 test('substract 5 and 5 to be 0', () => {
